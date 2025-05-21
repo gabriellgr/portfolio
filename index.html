@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Portfólio Gabriell</title>
 </head>
+
 <body>
+    <div class="particulas"></div>
+
     <nav class="nav_bar">
         <ul class="menu">
             <li>
@@ -19,13 +24,13 @@
                 <a href="#projetos" class="menu_link">Projetos</a>
             </li>
             <li>
-                <a href="#contato" class="menu_link">Contato</a>
+                <a href="#contatos" class="menu_link">Contato</a>
             </li>
         </ul>
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <img src="./img/gabriell.png" alt="" class="foto-perfil">
+        <img src="./img/gabriell.jpg" alt="" class="foto-perfil">
         <h1>Gabriell Gregório</h1>
         <p class="atuacao">Desenvolvedor Back End</p>
     </main>
@@ -34,11 +39,16 @@
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-desc">
             <p class="sobre-text">
-                Graduando do curso de Bacharelado Ciências e Tecnologia com conhecimentos em linguagens de programação, banco de
-                dados e desenvolvimento web. Sempre em busca de expandir meus conhecimentos e aplicá-los na resolução de problemas
-                práticos. Domínio aprofundado em Python com projetos feitos com integração à APIs e tecnologias como Django, Flask,
-                MySQL. Prezo pelo trabalho em equipe e a busca por soluções eficientes. Me sinto motivado por desafios que envolvem
-                tecnologia da informação e a oportunidade de aprender novas habilidades, sempre com foco em crescimento pessoal e
+                Graduando do curso de Bacharelado Ciências e Tecnologia com conhecimentos em linguagens de programação,
+                banco de
+                dados e desenvolvimento web. Sempre em busca de expandir meus conhecimentos e aplicá-los na resolução de
+                problemas
+                práticos. Domínio aprofundado em Python com projetos feitos com integração à APIs e tecnologias como
+                Django, Flask,
+                MySQL. Prezo pelo trabalho em equipe e a busca por soluções eficientes. Me sinto motivado por desafios
+                que envolvem
+                tecnologia da informação e a oportunidade de aprender novas habilidades, sempre com foco em crescimento
+                pessoal e
                 profissional.
             </p>
         </div>
@@ -49,38 +59,90 @@
         <div class="projetos-items">
 
             <div class="projetos-card">
-                <img src=".img/projeto-1" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Agendamento de consultas online.</h3>
-                <p class="desc-projetos">Sistema web desenvolvido para o melhor fluxo de clinícas médicas, trazendo um sistema inovador de agendamento online.</p>
+                <a href="https://drive.google.com/file/d/1D8cvlB259ljxAuphjZVcs790oKMNxV3R/view" target="_blank" class="redirect-project">
+                    <img src="img/sage.png" alt="" class="projetos-imagem">
+                    <div class="box-card">
+                        <h3 class="info-projetos">Agendamento de consultas online.</h3>
+                        <p class="desc-projetos">Sistema web desenvolvido para o melhor fluxo de clinícas médicas,
+                            trazendo
+                            um sistema inovador de agendamento online.</p>
+                    </div>
+                </a>
             </div>
 
             <div class="projetos-card">
-                <img src=".img/projeto-1" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Agendamento de consultas online.</h3>
-                <p class="desc-projetos">Sistema web desenvolvido para o melhor fluxo de clinícas médicas, trazendo um sistema inovador de agendamento online.</p>
+                <a href="https://editor.p5js.org/gabriellgo/full/6N2uZRTj7" target="_blank" class="redirect-project">
+                    <img src="img/battle-space.png" alt="" class="projetos-imagem">
+                    <div class="box-card">
+                        <h3 class="info-projetos">Battle Space.</h3>
+                        <p class="desc-projetos">Jogo arcade 2D em que o jogador controla uma nave espacial e enfrenta
+                            uma invasão de vírus no espaço. Desenvolvido inteiramente em JavaScript com P5.js.</p>
+                    </div>
+                </a>
             </div>
 
             <div class="projetos-card">
-                <img src=".img/projeto-1" alt="" class="projetos-imagem">
-                <h3 class="info-projetos">Agendamento de consultas online.</h3>
-                <p class="desc-projetos">Sistema web desenvolvido para o melhor fluxo de clinícas médicas, trazendo um sistema inovador de agendamento online.</p>
+                <a href="" target="_blank" class="redirect-project">
+                    <img src="img/webscraping.png" alt="" class="projetos-imagem">
+                    <div class="box-card">
+                        <h3 class="info-projetos">Busca de dados de E-sports</h3>
+                        <p class="desc-projetos">Em breve...</p>
+                    </div>
+                </a>
             </div>
 
         </div>
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form action="" id="formulario" class="form-for-contato">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form action="" id="formulario" class="form-for-contato" onsubmit="enviarWhats(event)">
             <div class="group-form">
-                <input type="text" placeholder="Nome" class="campo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome">
             </div>
             <div class="group-form">
-                <textarea class="text-form" placeholder="Digite sua mensagem..."></textarea>
+                <textarea class="campo-form" placeholder="Digite sua mensagem..." id="mensagem"></textarea>
             </div>
+
+            <button type="submit" class="button-form">Enviar mensagem</button>
         </form>
     </section>
 
-    
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/gabriellgr/" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+
+            <a href="https://github.com/gabriellgr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+
+            <a href="https://drive.google.com/file/d/1Zgldke1HPSBsj_xkpbgZTnocAoaMsFmr/view" target="_blank"
+                title="Curriculo"><i class="fa-solid fa-file"></i></a>
+        </div>
+        <p class="footer-text">@2025 Gabriell Gregório</p>
+    </footer>
+
+
+    <script>
+
+        function enviarWhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5584988278424'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}/?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+
 </body>
+
 </html>
